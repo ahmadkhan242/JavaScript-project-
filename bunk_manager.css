@@ -1,0 +1,27 @@
+ /* this for all paragraph */
+p{
+  text-align: center;
+}
+
+.container{
+  padding-top: 10%;
+}
+/* getting the border around  */
+.p{
+  /* padding: 5%; */
+  border: 1px black solid;
+}
+/* for horizontal line  */
+hr{
+  width: 300px;
+  border: none;
+  height: 1px;
+  color:#333;
+  background-color:#333;
+}
+/* For all the buttons */
+.btn{
+  border: none;
+  background: #d4d6d8;
+  height: 40px;
+}
