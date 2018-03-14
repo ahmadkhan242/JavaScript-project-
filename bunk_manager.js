@@ -3,13 +3,19 @@ var classesHeld = 0;
 // attendHeld variable for no of classes attend
 var attendHeld = 0;
 
-//Here all the calculatin happen 
+//Here all the calculatin happen
 function score(){
-  var x = (3*classesHeld) - (4*attendHeld);
-  document.querySelector("#result").innerHTML = "You have to attend "+ x +" classes for 75% attendance.";
   var a = (attendHeld / classesHeld)*100 ;
   document.querySelector("#persentage").textContent = a;
-};
+  if (a > Number(75) ){
+        var x= 0;
+        document.querySelector("#result").innerHTML = " " }
+  else {
+        var x = (3*classesHeld) - (4*attendHeld);
+        document.querySelector("#result").innerHTML = "You have to attend "+ x +" classes for 75% attendance.";
+        document.querySelector("#persentage").textContent = a;
+        }
+  };
 // For button 1 with class btn1
 var bt1n= document.querySelector("#btn1");
 bt1n.addEventListener("click", function(){
