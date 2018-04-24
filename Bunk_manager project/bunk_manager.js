@@ -53,3 +53,9 @@ bt4n.addEventListener("click", function(){
     attendDisplay.value = attendHeld;
     score()
 });
+
+document.querySelector('input[type="number"]').addEventListener("input", function () {
+  classesHeld = document.querySelector('#classesDisplay').value
+  attendHeld = document.querySelector('#attendDisplay').value
+  score()
+});
