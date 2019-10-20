@@ -6,16 +6,22 @@ var attendHeld = 0;
 //Here all the calculatin happen
 function score(){
   var a = (attendHeld / classesHeld)*100 ;
-  document.querySelector("#persentage").textContent = parseInt(Math.ceil(a));
+  document.querySelector("#percentage").textContent = parseInt(Math.ceil(a));
   if (a > Number(75) ){
         var x= 0;
-        document.querySelector("#result").innerHTML = "You have sufficent attendence u can bunk now :) " }
+        document.querySelector("#result").innerHTML = "You have sufficent attendence u can bunk now :) " 
+        var root = document.getElementById( 'result' ); // '0' to assign the first (and only `HTML` tag)
+        root.setAttribute( 'class', 'full' );      
+      }
   else {
         //var x = (3*classesHeld) - (4*attendHeld);
         var x = Math.ceil(3*classesHeld/4) - attendHeld ;
         document.querySelector("#result").innerHTML = "You have to attend "+ x +" classes for minimum 75% attendance.";
+        var root = document.getElementById( 'result' ); // '0' to assign the first (and only `HTML` tag)
+        root.setAttribute( 'class', 'notfull' );      
         }
   };
+
 // For button 1 with id btn1
 var bt1n= document.querySelector("#btn1");
 bt1n.addEventListener("click", function(){
